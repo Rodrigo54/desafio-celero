@@ -1,0 +1,17 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid{
+  display: grid;
+  background-color: #9E9E9E;
+  grid-template: repeat(3, auto) / repeat(3, auto);
+  gap: 10px;
+  .cell{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+  }
+}

@@ -1,0 +1,16 @@
+:host{
+  display: block;
+  padding: 10px;
+}
+
+svg{
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+.player1 {
+  stroke: #32BBFA;
+}
+.player2 {
+  stroke: #FA7132;
+  fill: transparent;
+}
