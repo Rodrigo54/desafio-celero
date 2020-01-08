@@ -1,11 +1,23 @@
-<div class="grid">
-  <app-cell [col]='0' [row]='0' class="cell"></app-cell>
-  <app-cell [col]='1' [row]='0' class="cell"></app-cell>
-  <app-cell [col]='2' [row]='0' class="cell"></app-cell>
-  <app-cell [col]='0' [row]='1' class="cell"></app-cell>
-  <app-cell [col]='1' [row]='1' class="cell"></app-cell>
-  <app-cell [col]='2' [row]='1' class="cell"></app-cell>
-  <app-cell [col]='0' [row]='2' class="cell"></app-cell>
-  <app-cell [col]='1' [row]='2' class="cell"></app-cell>
-  <app-cell [col]='2' [row]='2' class="cell"></app-cell>
+<div class="box">
+  <div class="board">
+    <app-cell [col]='0' [row]='0' class="cell"></app-cell>
+    <app-cell [col]='1' [row]='0' class="cell"></app-cell>
+    <app-cell [col]='2' [row]='0' class="cell"></app-cell>
+    <app-cell [col]='0' [row]='1' class="cell"></app-cell>
+    <app-cell [col]='1' [row]='1' class="cell"></app-cell>
+    <app-cell [col]='2' [row]='1' class="cell"></app-cell>
+    <app-cell [col]='0' [row]='2' class="cell"></app-cell>
+    <app-cell [col]='1' [row]='2' class="cell"></app-cell>
+    <app-cell [col]='2' [row]='2' class="cell"></app-cell>
+  </div>
+  <div *ngIf="endGame$ | async; let endGame">
+    Fim de jogo!
+    <ng-container *ngIf="endGame.draw; else victory">
+      Empate!
+    </ng-container>
+    <ng-template #victory>
+      Player {{ endGame.player }} Venceu!
+    </ng-template>
+  </div>
+  <button (click)="reset()">Reiniciar Jogo</button>
 </div>

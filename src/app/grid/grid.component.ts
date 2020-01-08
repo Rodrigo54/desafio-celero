@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '@core/game.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-grid',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridComponent implements OnInit {
 
-  constructor() { }
+  endGame$: Observable<any>;
+
+  constructor(private game: GameService) { }
 
   ngOnInit() {
+    this.endGame$ = this.game.endGame$;
+  }
+
+  reset() {
+    this.game.reset();
   }
 
 }
