@@ -115,8 +115,7 @@ export class GameService {
     const player = this.playerSubject.getValue();
     if (this.checkDiagonal() ||  this.checkRow() || this.checkCol()) {
       this.endGameSubject.next({ player, victory: true });
-    }
-    if (this.playCount === 9) {
+    } else if (this.playCount === 9) {
       this.endGameSubject.next({ draw: true });
     }
   }
