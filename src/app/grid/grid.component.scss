@@ -1,7 +1,16 @@
-:host{
+:host {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+}
+.box{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
 }
 
 .board{
@@ -10,8 +19,24 @@
   grid-template: repeat(3, auto) / repeat(3, auto);
   gap: 10px;
   .cell{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-color: white;
+  }
+}
+
+.footer{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  .endgame{
+    height: 30px;
+  }
+  button{
+    margin: auto;
+    justify-content: flex-end;
   }
 }

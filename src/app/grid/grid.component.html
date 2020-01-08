@@ -10,14 +10,18 @@
     <app-cell [col]='1' [row]='2' class="cell"></app-cell>
     <app-cell [col]='2' [row]='2' class="cell"></app-cell>
   </div>
-  <div *ngIf="endGame$ | async; let endGame">
-    Fim de jogo!
-    <ng-container *ngIf="endGame.draw; else victory">
-      Empate!
-    </ng-container>
-    <ng-template #victory>
-      Player {{ endGame.player }} Venceu!
-    </ng-template>
+  <div class="footer">
+    <div class="endgame">
+      <span *ngIf="endGame$ | async; let endGame">
+        Fim de jogo!
+        <ng-container *ngIf="endGame.draw; else victory">
+          Empate!
+        </ng-container>
+        <ng-template #victory>
+          Player {{ endGame.player }} Venceu!
+        </ng-template>
+      </span>
+    </div>
+    <button (click)="reset()">Reiniciar Jogo</button>
   </div>
-  <button (click)="reset()">Reiniciar Jogo</button>
 </div>
