@@ -1,0 +1,14 @@
+<label>
+  Escolha seu Personagem da Marvel
+  <input [formControl]="searchCtrl" list="heros" [appAutocomplete]="autocomplete">
+</label>
+<app-autocomplete [displayWith]="displayWith" #autocomplete="appAutocomplete" (optionSelected)="setOption($event)">
+  <ng-template appAutocompleteContent>
+    <ng-container *ngIf="filteredStates$ | async; let result" >
+      <app-option *ngFor="let option of result" [value]="option">
+        {{ option.name }}
+      </app-option>
+      <app-option class="no-result" *ngIf="!result.length">No result...</app-option>
+    </ng-container>
+  </ng-template>
+</app-autocomplete>
