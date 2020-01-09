@@ -47,3 +47,4 @@ Thumbs.db
 
 # Project Files
 .angulardoc.json
+.vscode/*
