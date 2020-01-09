@@ -15,12 +15,17 @@ export class CellComponent implements OnInit {
 
   @Input() col: number;
   @Input() row: number;
+  endGame = false;
 
   constructor(private game: GameService) { }
 
   ngOnInit() {
     this.game.currentPlayer$.subscribe(player => {
       this.currentPlayer = player;
+    });
+
+    this.game.endGame$.subscribe(endGame => {
+      this.endGame = endGame;
     });
 
     this.game.getCell(this.row, this.col).subscribe(move => {
@@ -42,7 +47,7 @@ export class CellComponent implements OnInit {
 
   @HostListener('click', ['$event'])
   onClick($event: MouseEvent) {
-    if (this.cell === null) {
+    if (!this.endGame && this.cell === null) {
       this.cell = this.currentPlayer;
       this.game.insert(this.row, this.col);
     }
