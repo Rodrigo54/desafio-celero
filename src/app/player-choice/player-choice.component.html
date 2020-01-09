@@ -1,3 +1,5 @@
 <p>player-choice works!</p>
-<app-input-character></app-input-character>
+<app-input-character class="input" title="Player 1" (selected)="onSelect($event, 1)"></app-input-character>
+<app-input-character class="input" title="Player 2" (selected)="onSelect($event, 2)"></app-input-character>
 
+<button (click)="play()" [disabled]="disableBtn">Play</button>

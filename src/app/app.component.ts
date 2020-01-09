@@ -12,7 +12,9 @@ export class AppComponent implements OnInit {
   constructor(private playerService: PlayerService) {}
 
   ngOnInit() {
-    this.playerSelected = this.playerService.playerSelected$;
+    this.playerService.playerStart$.subscribe(start => {
+      this.playerSelected = start;
+    });
   }
 
 }
