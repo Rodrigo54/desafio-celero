@@ -1,0 +1,62 @@
+.header{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 80vw;
+  margin-bottom: 30px;
+  img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: solid .375em;
+    border-image: linear-gradient(#fdfdfd, #c4c4c4) 1;
+    box-shadow: 0 .375em .5em -.125em #808080;
+  }
+  .points{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .name{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    h3{
+      margin: 5px 10px;
+    }
+    svg{
+      width: 20px;
+      height: 20px;
+      stroke-width: 10px;
+      stroke-linecap: round;
+    }
+    .player1 {
+      stroke: #32BBFA;
+    }
+    .player2 {
+      stroke: #FA7132;
+      fill: transparent;
+    }
+  }
+  .content{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  .player1{
+    display: flex;
+    flex-flow: row nowrap;
+    order: 1;
+    .content{
+      margin-left: 20px;
+    }
+  }
+  .player2{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    order: 2;
+    .content{
+      margin-right: 20px;
+      text-align: right;
+    }
+  }
+}
