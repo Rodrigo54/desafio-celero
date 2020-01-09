@@ -9,6 +9,7 @@ import { CellComponent } from './grid/cell/cell.component';
 import { PlayerChoiceComponent } from './player-choice/player-choice.component';
 import { InputCharacterComponent } from './player-choice/input-character/input-character.component';
 import { SharedModule } from './shared/shared.module';
+import { PlayersHeaderComponent } from './grid/players-header/players-header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SharedModule } from './shared/shared.module';
     GridComponent,
     CellComponent,
     PlayerChoiceComponent,
-    InputCharacterComponent
+    InputCharacterComponent,
+    PlayersHeaderComponent
   ],
   imports: [
     BrowserModule,
