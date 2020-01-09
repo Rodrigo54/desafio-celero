@@ -67,7 +67,9 @@ export class AutocompleteDirective implements OnInit, OnDestroy {
   }
 
   private close() {
-    this.overlayRef.detach();
+    if (this.overlayRef) {
+      this.overlayRef.detach();
+    }
     this.overlayRef = null;
   }
 

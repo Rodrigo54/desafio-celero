@@ -1,5 +1,6 @@
 .autocomplete {
-  background-color: #fff;
+  background-color: var(--bg);
+  color: var(--text-color);
   box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
   display: block;
