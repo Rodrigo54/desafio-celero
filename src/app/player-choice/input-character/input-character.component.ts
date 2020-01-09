@@ -1,5 +1,5 @@
 import { PlayerService } from '@core/player.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { startWith, filter, debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
@@ -13,6 +13,11 @@ export class InputCharacterComponent implements OnInit {
 
   searchCtrl = new FormControl('', { updateOn: 'change' });
   filteredStates$: Observable<any>;
+  imgsrc = 'https://d23.com/app/uploads/2019/07/marvel-op-2-1180w-600hIris-780x440-1563899008.jpg';
+  @Input() label = 'Escolha seu Personagem da Marvel';
+  @Input() title = 'Player 1';
+
+  @Output() selected = new EventEmitter();
 
   constructor(private playerService: PlayerService) {}
 
@@ -28,7 +33,8 @@ export class InputCharacterComponent implements OnInit {
   }
 
   setOption(value: any) {
-    console.log(value);
+    this.imgsrc = `${value.thumbnail.path}.${value.thumbnail.extension}`;
+    this.selected.emit(value);
   }
 
   displayWith(item: any) {

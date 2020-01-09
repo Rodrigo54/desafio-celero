@@ -1,0 +1,45 @@
+:host{
+  display: inline-block;
+}
+
+.box{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  background-color: #292929;
+  color: #ec1d24;
+  .content{
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 280px;
+    h2{
+      margin: 0;
+    }
+  }
+  label{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-right: 20px;
+    color: #9a7ab9;
+    input{
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #9E9E9E;
+      border-radius: 10px;
+      background-color: var(--bg);
+      color: var(--text-color);
+    }
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: solid .375em;
+    border-image: linear-gradient(#fdfdfd, #c4c4c4) 1;
+    box-shadow: 0 .375em .5em -.125em #808080;
+  }
+}
