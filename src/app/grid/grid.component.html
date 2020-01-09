@@ -1,4 +1,5 @@
 <div class="box">
+  <app-players-header></app-players-header>
   <div class="board">
     <app-cell [col]='0' [row]='0' class="cell"></app-cell>
     <app-cell [col]='1' [row]='0' class="cell"></app-cell>
@@ -18,7 +19,7 @@
           Empate!
         </ng-container>
         <ng-template #victory>
-          Player {{ endGame.player }} Venceu!
+          Player {{ endGame.name }} Venceu!
         </ng-template>
       </span>
     </div>
