@@ -59,8 +59,7 @@ export class PlayerService {
   }
 
   setPlayer(value: Omit<Player, 'type' | 'wins'>, player: 1 | 2) {
-    let player1: Player;
-    let player2: Player;
+    let { 1: player1, 2: player2 } = this.playersSubject.getValue();
     if (player === 1) {
       player1 = {
         ...value,
