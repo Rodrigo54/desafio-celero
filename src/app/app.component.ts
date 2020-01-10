@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 import { PlayerService } from '@core/player.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { PlayerService } from '@core/player.service';
 export class AppComponent implements OnInit {
 
   playerSelected = false;
+
+  version = VERSION;
   constructor(private playerService: PlayerService) {}
 
   ngOnInit() {
