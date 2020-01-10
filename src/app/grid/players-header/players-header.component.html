@@ -2,7 +2,7 @@
   <ng-container *ngFor="let player of players" >
     <ng-container *ngIf="player.type === 'X';" >
       <div class="player1">
-        <img [src]="player.thumbnail" [alt]="player.name">
+        <app-thumbnail [src]="player.thumbnail"></app-thumbnail>
         <div class="content">
           <div class="name">
             <svg viewBox="0 0 50 50">
@@ -19,7 +19,7 @@
     </ng-container>
     <ng-container *ngIf="player.type === 'O';" >
       <div class="player2">
-        <img [src]="player.thumbnail" [alt]="player.name">
+        <app-thumbnail [src]="player.thumbnail"></app-thumbnail>
         <div class="content">
           <div class="name">
             <h3>{{ player.name }}</h3>

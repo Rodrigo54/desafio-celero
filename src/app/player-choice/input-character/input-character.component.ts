@@ -13,7 +13,7 @@ export class InputCharacterComponent implements OnInit {
 
   searchCtrl = new FormControl('', { updateOn: 'change' });
   filteredStates$: Observable<any>;
-  imgsrc = 'https://d23.com/app/uploads/2019/07/marvel-op-2-1180w-600hIris-780x440-1563899008.jpg';
+  imgsrc: string;
   @Input() label = 'Escolha seu Personagem da Marvel';
   @Input() title = 'Player 1';
 
