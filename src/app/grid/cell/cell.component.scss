@@ -1,0 +1,19 @@
+:host{
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+svg{
+  width: 100%;
+  height: 100%;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+.player1 {
+  stroke: #32BBFA;
+}
+.player2 {
+  stroke: #FA7132;
+  fill: transparent;
+}

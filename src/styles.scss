@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/cdk/overlay-prebuilt.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #e2e1e0;
+  --text-color: #2c2c2c;
+  --primary-color: #ec1d24;
+  --secondary-color: #9C27B0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  vertical-align: baseline;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg);
+  color: var(--text-color);
+}

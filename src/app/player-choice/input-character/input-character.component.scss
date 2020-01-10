@@ -1,0 +1,40 @@
+:host{
+  display: inline-block;
+}
+
+.box{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 480px) {
+    flex-flow: column nowrap;
+  }
+  .content{
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 280px;
+    margin-left: 20px;
+    @media screen and (max-width: 480px) {
+      margin-top: 20px;
+      margin-left: 0px;
+      min-width: 100px;
+    }
+    h2{
+      margin: 0px 0px 5px 0px;
+    }
+  }
+  label{
+    display: flex;
+    flex-flow: column nowrap;
+    color: var(--secondary-color);
+    input{
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #9E9E9E;
+      border-radius: 10px;
+      background-color: var(--bg);
+      color: var(--text-color);
+    }
+  }
+}

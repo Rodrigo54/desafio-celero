@@ -1,0 +1,37 @@
+<div class="header">
+  <ng-container *ngFor="let player of players" >
+    <ng-container *ngIf="player.type === 'X';" >
+      <div class="player1">
+        <app-thumbnail [src]="player.thumbnail"></app-thumbnail>
+        <div class="content">
+          <div class="name">
+            <svg viewBox="0 0 50 50">
+              <g class="player1">
+                <line x1="5" y1="5" x2="45" y2="45"></line>
+                <line x1="45" y1="5" x2="5" y2="45"></line>
+              </g>
+            </svg>
+            <h3>{{ player.name }}</h3>
+          </div>
+          <span class="points">{{ player.wins }}</span>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="player.type === 'O';" >
+      <div class="player2">
+        <app-thumbnail [src]="player.thumbnail"></app-thumbnail>
+        <div class="content">
+          <div class="name">
+            <h3>{{ player.name }}</h3>
+            <svg viewBox="0 0 50 50">
+              <g class="player2">
+                <circle cx="50%" cy="50%" r="20"></circle>
+              </g>
+            </svg>
+          </div>
+          <span  class="points">{{ player.wins }}</span>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

@@ -1,0 +1,20 @@
+<div class="box">
+  <app-thumbnail [src]="imgsrc"></app-thumbnail>
+  <div class="content">
+    <h2>{{title}}</h2>
+    <label>
+      {{label}}
+      <input [formControl]="searchCtrl" list="heros" [appAutocomplete]="autocomplete">
+    </label>
+  </div>
+</div>
+<app-autocomplete [displayWith]="displayWith" #autocomplete="appAutocomplete" (optionSelected)="setOption($event)">
+  <ng-template appAutocompleteContent>
+    <ng-container *ngIf="filteredStates$ | async; let result" >
+      <app-option *ngFor="let option of result" [value]="option">
+        {{ option.name }}
+      </app-option>
+      <app-option class="no-result" *ngIf="!result.length">Não Encontrado...</app-option>
+    </ng-container>
+  </ng-template>
+</app-autocomplete>

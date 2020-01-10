@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.board{
+  display: grid;
+  background-color: #9E9E9E;
+  grid-template: repeat(3, auto) / repeat(3, auto);
+  gap: 10px;
+  .cell{
+    width: 90px;
+    height: 90px;
+    background-color: white;
+  }
+}
+
+.footer{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  .endgame{
+    height: 30px;
+    margin: 20px auto;
+  }
+}

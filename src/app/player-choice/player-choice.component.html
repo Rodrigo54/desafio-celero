@@ -1,0 +1,4 @@
+<app-input-character class="input" title="Player 1" (selected)="onSelect($event, 1)"></app-input-character>
+<app-input-character class="input" title="Player 2" (selected)="onSelect($event, 2)"></app-input-character>
+
+<app-button (click)="play()" [disabled]="disableBtn">Play</app-button>
