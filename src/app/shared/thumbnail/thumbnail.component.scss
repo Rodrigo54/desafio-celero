@@ -1,0 +1,12 @@
+img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: solid .375em;
+  border-image: linear-gradient(#fdfdfd, #c4c4c4) 1;
+  box-shadow: 0 .375em .5em -.125em #808080;
+  @media screen and (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
+}
