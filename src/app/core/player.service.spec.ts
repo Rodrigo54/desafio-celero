@@ -16,4 +16,13 @@ describe('PlayerService', () => {
     const service: PlayerService = TestBed.get(PlayerService);
     expect(service).toBeTruthy();
   });
+
+  it('random types', () => {
+    const service: PlayerService = TestBed.get(PlayerService);
+    const num = service.defineTypes();
+    service.players$.subscribe(players => {
+      expect(num % 2 === 0).toBe(players[1].type === 'X');
+      expect(num % 2 !== 0).toBe(players[1].type === 'O');
+    });
+  });
 });
