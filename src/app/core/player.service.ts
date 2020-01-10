@@ -26,13 +26,13 @@ export class PlayerService {
         thumbnail: 'http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg',
         name: 'Iron Man',
         wins: 0,
-        type: 'X'
+        type: null
       },
       2: {
         thumbnail: 'http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg',
         name: 'Spider-Man',
         wins: 0,
-        type: 'O'
+        type: null
       }
     }
   );
@@ -94,16 +94,17 @@ export class PlayerService {
   }
 
   defineTypes() {
-    const { 1: player1, 2: player2 } = this.playersSubject.getValue();
+    let { 1: player1, 2: player2 } = this.playersSubject.getValue();
     const num = Math.floor(Math.random() * (1000 - 1)) + 1;
     if (num % 2 === 0) {
-      player1.type = 'X';
-      player2.type = 'O';
+      player1 = { ...player1, type: 'X' };
+      player2 = { ...player2, type: 'O' };
     } else {
-      player1.type = 'O';
-      player2.type = 'X';
+      player1 = { ...player1, type: 'O' };
+      player2 = { ...player2, type: 'X' };
     }
     this.playersSubject.next({ 1: player1, 2: player2 });
+    return num;
   }
 
   search(text: string) {
