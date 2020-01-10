@@ -1,6 +1,8 @@
+import { SharedModule } from '@shared/shared.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlayersHeaderComponent } from './players-header.component';
+import { CoreModule } from '@core/core.module';
 
 describe('PlayersHeaderComponent', () => {
   let component: PlayersHeaderComponent;
@@ -8,7 +10,8 @@ describe('PlayersHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlayersHeaderComponent ]
+      declarations: [ PlayersHeaderComponent ],
+      imports: [SharedModule, CoreModule]
     })
     .compileComponents();
   }));

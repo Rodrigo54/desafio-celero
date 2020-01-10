@@ -1,3 +1,6 @@
+import { CoreModule } from '@core/core.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '@shared/shared.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputCharacterComponent } from './input-character.component';
@@ -8,7 +11,8 @@ describe('InputCharacterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputCharacterComponent ]
+      declarations: [ InputCharacterComponent ],
+      imports: [CoreModule, SharedModule, ReactiveFormsModule]
     })
     .compileComponents();
   }));
