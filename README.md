@@ -1,5 +1,6 @@
 # Desafio Celero
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3c5aee26-3934-465a-a889-fcc991457c20/deploy-status)](https://app.netlify.com/sites/desafio-celero/deploys)
+[![Build Status](https://travis-ci.com/Rodrigo54/desafio-celero.svg?branch=master)](https://travis-ci.com/Rodrigo54/desafio-celero)
 
 O seu objetivo será criar um jogo da velha entre personagens da Marvel.
 
