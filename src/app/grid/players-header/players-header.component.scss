@@ -2,15 +2,12 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  width: 80vw;
-  margin-bottom: 30px;
-  img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: solid .375em;
-    border-image: linear-gradient(#fdfdfd, #c4c4c4) 1;
-    box-shadow: 0 .375em .5em -.125em #808080;
+  width: 720px;
+  margin-bottom: 10px;
+  @media screen and (max-width: 480px) {
+    margin-bottom: 30px;
+    width: 95vw;
+    flex-flow: column nowrap;
   }
   .points{
     font-size: 2rem;

@@ -1,6 +1,12 @@
-<ng-container *ngIf="!playerSelected" >
-  <app-player-choice></app-player-choice>
-</ng-container>
-<ng-container *ngIf="playerSelected">
-  <app-grid></app-grid>
-</ng-container>
+<header class="header">
+  <h1>Marvel Tic Tac Toe</h1>
+</header>
+<div class="paper">
+  <ng-container *ngIf="!playerSelected" >
+    <app-player-choice></app-player-choice>
+  </ng-container>
+  <ng-container *ngIf="playerSelected">
+    <app-grid></app-grid>
+  </ng-container>
+</div>
+

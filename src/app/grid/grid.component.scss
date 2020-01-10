@@ -3,7 +3,6 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 .box{
   display: flex;
@@ -11,6 +10,7 @@
   justify-content: center;
   align-items: center;
   margin: 0px auto;
+  width: 100%;
 }
 
 .board{
@@ -26,7 +26,7 @@
 }
 
 .footer{
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -34,9 +34,6 @@
   align-items: center;
   .endgame{
     height: 30px;
-  }
-  button{
-    margin: auto;
-    justify-content: flex-end;
+    margin: 20px auto;
   }
 }
